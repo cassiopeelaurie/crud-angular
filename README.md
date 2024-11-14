@@ -1,27 +1,38 @@
-# AngularFullCrud
+# Un bon vieux CRUD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Ton objectif est de réussir à faire un CRUD complet avec Angular 🐙
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Lancer le projet
 
-## Code scaffolding
+Lance le projet avec `npm run start` plutôt que `ng serve`. \
+En observant le terminal ainsi que le package.json, comprends-tu pourquoi ?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ce que tu dois faire
 
-## Build
+- Créer 4 composants. Chacun sera responsable d'une action du CRUD et y encapsulera les actions "templates" liées à l'utilisateur.
+- Créer un service `UserApiService` qui aura 4 méthodes HTTP pour faire un CRUD complet : `GET` `POST` `PUT` `DELETE`. Tu dois effectuer ce CRUD sur le fichier `db.json` servi avec `json-server`.
+- La [Documentation json-server](https://www.npmjs.com/package/json-server) te donnes un exemple d'endpoints pour ces 4 types de requêtes.
+- Les requêtes de type `POST` ou `PUT` nécessitent que ta requête HTTP ait un `body`. La [Doc officielle du HttpClient](https://angular.dev/guide/http/making-requests#fetching-json-data) t'en parle.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Structure des fichiers
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+angular-full-crud/
+├── src/
+│   ├── app/
+│   │   ├── users/
+│   │   │   ├── components/
+│   │   │   │   ├── user-list/
+│   │   │   │   ├── create-user/
+│   │   │   │   ├── update-user/
+│   │   │   │   ├── delete-user/
+│   │   │   ├── services/
+│   │   │   │   ├── user-api-service
+│   │   │   ├── pages/
+├── package.json
+├── angular.json
+├── README.md
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```
