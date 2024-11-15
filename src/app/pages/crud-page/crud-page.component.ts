@@ -1,38 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ReadComponent } from '../../components/read/read.component';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { MenuItem } from 'primeng/api';
+import { CreateComponent } from "../../components/create/create.component";
+import { UpdateComponent } from "../../components/update/update.component";
+import { DeleteComponent } from "../../components/delete/delete.component";
+
 
 @Component({
   selector: 'app-crud-page',
   standalone: true,
-  imports: [ReadComponent, PanelMenuModule],
+  imports: [ReadComponent, CreateComponent, UpdateComponent, DeleteComponent],
   templateUrl: './crud-page.component.html',
   styleUrl: './crud-page.component.css',
 })
-export class CrudPageComponent implements OnInit {
-  items: MenuItem[]= [];
+export class CrudPageComponent{
 
-  ngOnInit() {
-    this.items = [
-      {
-        label: 'CRUD',
-        icon: 'pi pi-file',
-        items: [
-          {
-            label: 'POST',
-            icon: 'pi pi-file',
-          },
-          {
-            label: 'PUT',
-            icon: 'pi pi-users',
-          },
-          {
-            label: 'DELETE',
-            icon: 'pi pi-users',
-          },
-        ],
-      },
-    ];
-  }
 }

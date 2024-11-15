@@ -9,7 +9,7 @@ import { User } from '../models/UserModel.form';
 export class UserApiService {
   private _httpClient: HttpClient = inject(HttpClient);
 
-  private readonly _BASE_API_URL_: string = 'public/db/db.json';
+  private readonly _BASE_API_URL_: string = "http://localhost:3000/users";
 
   constructor() {}
 

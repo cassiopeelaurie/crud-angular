@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve\" \"json-server public/db/db.json\"",
+    "start": "concurrently \"ng serve\" \"json-server public/db.json\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,7 +20,7 @@
     "@angular/router": "^18.2.0",
     "primeng": "^17.18.12",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.8.1",
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
