@@ -1,0 +1,9 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" [(ngModel)]="user.email" placeholder="Votre email...">
+
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" [(ngModel)]="user.username" placeholder="Votre pseudo...">
+
+  <button type="submit">Créer utilisateur</button>
+</form>

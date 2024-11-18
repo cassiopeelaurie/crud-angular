@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { CrudPageComponent } from './pages/crud-page/crud-page.component';
+import { CrudPageComponent } from './users/pages/crud-page/user-management-page';
 
 export const routes: Routes = [
     {

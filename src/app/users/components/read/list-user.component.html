@@ -1,0 +1,11 @@
+<section>
+  @for(user of users$ | async; track user.id) {
+  <div>
+      <p>ID : {{ user.id }}</p>
+      <p>Username : {{ user.username }}</p>
+      <p>Email : {{ user.email }}</p>
+      <app-update-user [user]="user | clone"></app-update-user>
+      <app-delete-user [userID]="user.id"></app-delete-user>
+  </div>
+  }
+</section>
